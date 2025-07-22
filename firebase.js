@@ -1,20 +1,23 @@
-
 // firebase.js
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getAuth, RecaptchaVerifier, signInWithPhoneNumber, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, RecaptchaVerifier, signInWithPhoneNumber } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
+// Your new Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAFIYJ9XmEp6HvMvRwwhSEopbRtx2D8Hg",
-  authDomain: "xoltial-auth.firebaseapp.com",
-  projectId: "xoltial-auth",
-  storageBucket: "xoltial-auth.appspot.com",
-  messagingSenderId: "497733495970",
-  appId: "1:497733495970:web:xxxxxxx"
+  apiKey: "AIzaSyAQLMSykqbdRdUajr5GU49fdmEXbHejbAo",
+  authDomain: "xoltial-web.firebaseapp.com",
+  projectId: "xoltial-web",
+  storageBucket: "xoltial-web.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 const db = getFirestore(app);
 
-export { auth, db, RecaptchaVerifier, signInWithPhoneNumber, GoogleAuthProvider, signInWithPopup };
+export { auth, provider, db, RecaptchaVerifier, signInWithPhoneNumber };
