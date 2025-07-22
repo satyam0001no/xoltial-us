@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xoltial – Seductive Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <img src="logo.png" alt="Xoltial Logo" class="logo" />
+    <h1 class="title">Trigger Her Mind</h1>
+    <p class="subtitle">Enter your number to unlock the dark seduction</p>
+    <input type="tel" id="phone" placeholder="Enter Mobile Number" />
+    <button onclick="sendOTP()">Send OTP</button>
+    <div id="otp-section" style="display:none;">
+      <input type="text" id="otp" placeholder="Enter OTP" />
+      <button onclick="verifyOTP()">Verify</button>
+    </div>
+    <hr class="separator" />
+    <button onclick="googleLogin()" class="google-btn">Login with Google</button>
+    <footer>@xoltial</footer>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="firebase.js"></script>
+  <script>
+    function sendOTP() {
+      document.getElementById("otp-section").style.display = "block";
+    }
+    function verifyOTP() {
+      // Dummy OTP verification
+      window.location.href = "upi.html";
+    }
+    function googleLogin() {
+      // Dummy Google login logic here
+    }
+  </script>
+</body>
+</html>

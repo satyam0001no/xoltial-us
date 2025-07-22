@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay ₹2 via UPI — Xoltial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Rubik', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff0033;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .qr-container {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 51, 0.4);
+      text-align: center;
+    }
+    img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .upi-id {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .note {
+      font-size: 0.9rem;
+      margin-top: 20px;
+      color: #888;
+      text-align: center;
+    }
+    .back-link {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #ff0033;
+      border-radius: 8px;
+      color: #ff0033;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .back-link:hover {
+      background: #ff0033;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pay ₹2 to Unlock All Clips</h1>
+  <div class="qr-container">
+    <img src="upi-qr.png" alt="Scan this QR to Pay">
+    <div class="upi-id">UPI ID: <strong>7520221141-2@ibl</strong></div>
+  </div>
+  <div class="note">
+    After completing your payment, return to the login page.<br>
+    PDF will be unlocked automatically once payment is verified.
+  </div>
+  <a href="index.html" class="back-link">Back to Login</a>
+</body>
+</html>
